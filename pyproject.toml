@@ -1,0 +1,28 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "afr-sdk"
+version         = "1.0.1"
+description     = "Tamper-evident execution recording for AI agents — Python SDK"
+requires-python = ">=3.8"
+dependencies    = ["requests>=2.28"]
+readme = "README.md"
+license         = "MIT"
+keywords        = ["ai", "agent", "audit", "tamper-evident", "langchain", "langgraph"]
+classifiers     = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-asyncio>=0.23", "responses>=0.25"]
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["afr_python_sdk*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
