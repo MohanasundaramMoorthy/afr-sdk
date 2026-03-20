@@ -1,6 +1,6 @@
 # AFR SDK
 
-Tamper-evident execution recording for AI agents.
+AFR is a trust layer for AI systems — record, replay, and verify agent decisions.
 
 [![PyPI version](https://img.shields.io/pypi/v/afr-sdk.svg)](https://pypi.org/project/afr-sdk/)
 [![Python](https://img.shields.io/pypi/pyversions/afr-sdk.svg)](https://pypi.org/project/afr-sdk/)
@@ -194,6 +194,7 @@ proof = rec.finish()
 `afr_llm` records the prompt hash, output content, and token usage. `afr_tool` records the tool name, input, and output. Async variants `afr_llm_async` and `afr_tool_async` are also available.
 
 ---
+proof is a cryptographically signed record of the full execution
 
 ## Security
 
